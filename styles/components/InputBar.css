@@ -1,0 +1,16 @@
+.input_bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.bar {
+  flex: 2;
+  margin: 10px;
+}
+
+.button {
+  flex: 1;
+  margin: 10px;
+}
