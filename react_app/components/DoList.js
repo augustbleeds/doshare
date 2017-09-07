@@ -1,6 +1,7 @@
 import React from 'react';
 import DayToDo from './DayToDo';
 
+
 const dummyData =
 [
   {
@@ -12,7 +13,7 @@ const dummyData =
     todos: ['Do Dishes', 'Do Homework', 'Eat Dinner'],
   }];
 
-export default class extends React.Component {
+class DoList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -21,8 +22,10 @@ export default class extends React.Component {
   render() {
     return (
       <div>
-        {dummyData.map(dayInfo => <DayToDo day={dayInfo.day} />)}
+        {dummyData.map(dayInfo => <DayToDo day={dayInfo.day} todos={dayInfo.todos} />)}
       </div>
     );
   }
 }
+
+export default DoList;
