@@ -8,7 +8,6 @@ export default () => (
     <MyAppBar />
     <Greeting />
     <InputBar />
-    <p> Input Bar goes here </p>  {/* InputBar */}
     <div> {/* ToDoList */}
        ToDoList goes here
     </div>

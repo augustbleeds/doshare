@@ -1,8 +1,9 @@
 import React from 'react';
 import { AppBar } from 'react-toolbox/lib/app_bar';
+import styles from '../../styles/components/AppBar.css';
 
 const MyAppBar = () => (
-  <AppBar title="This is the App Bar" />
+  <AppBar className={styles.bar} title="This is the App Bar" />
 );
 
 export default MyAppBar;
