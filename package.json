@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/decreaseme/doshare#readme",
   "dependencies": {
+    "animate.css": "^3.5.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-toolbox": "^2.0.0-beta.12"
