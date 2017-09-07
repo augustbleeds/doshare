@@ -13,4 +13,5 @@
 .button {
   flex: 1;
   margin: 10px;
+  border-radius: 30px;
 }
