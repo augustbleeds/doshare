@@ -7,11 +7,11 @@ import DoList from './DoList';
 const dummyData =
 [
   {
-    day: 'Monday',
+    day: new Date(1996, 7, 14),
     todos: ['Eat', 'Sleep', 'Play'],
   },
   {
-    day: 'Tuesday',
+    day: new Date(),
     todos: ['Do Dishes', 'Do Homework', 'Eat Dinner'],
   }];
 

@@ -15,7 +15,7 @@ class DayToDo extends React.Component {
       <Card className={styles.day_wrapper}>
         <CardTitle
           title={this.props.day}
-          subtitle="get 'em done"
+          subtitle={this.props.dateStr}
         />
         {this.props.todos.map(x => <ToDo todo={x} />)}
       </Card>
@@ -24,6 +24,7 @@ class DayToDo extends React.Component {
 }
 
 DayToDo.propTypes = {
+  dateStr: PropTypes.string.isRequired,
   day: PropTypes.string.isRequired,
   todos: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
