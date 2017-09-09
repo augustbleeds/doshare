@@ -1,6 +1,8 @@
 import React from 'react';
 import { Card, CardTitle } from 'react-toolbox';
 import PropTypes from 'prop-types';
+import ToDo from './ToDo';
+import styles from '../../styles/components/DayToDo.css';
 
 class DayToDo extends React.Component {
   constructor(props) {
@@ -10,12 +12,12 @@ class DayToDo extends React.Component {
 
   render() {
     return (
-      <Card>
+      <Card className={styles.day_wrapper}>
         <CardTitle
           title={this.props.day}
           subtitle="get 'em done"
         />
-        {this.props.todos.map(x => <p> {x} </p>)}
+        {this.props.todos.map(x => <ToDo todo={x} />)}
       </Card>
     );
   }

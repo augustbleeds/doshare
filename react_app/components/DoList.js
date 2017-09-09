@@ -1,17 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import DayToDo from './DayToDo';
-
-
-const dummyData =
-[
-  {
-    day: 'Monday',
-    todos: ['Eat', 'Sleep', 'Play'],
-  },
-  {
-    day: 'Tuesday',
-    todos: ['Do Dishes', 'Do Homework', 'Eat Dinner'],
-  }];
 
 class DoList extends React.Component {
   constructor(props) {
@@ -22,10 +11,14 @@ class DoList extends React.Component {
   render() {
     return (
       <div>
-        {dummyData.map(dayInfo => <DayToDo day={dayInfo.day} todos={dayInfo.todos} />)}
+        {this.props.days.map(dayInfo => <DayToDo day={dayInfo.day} todos={dayInfo.todos} />)}
       </div>
     );
   }
 }
+
+DoList.propTypes = {
+  days: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 export default DoList;
