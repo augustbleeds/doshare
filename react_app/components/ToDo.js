@@ -11,7 +11,7 @@ class ToDo extends React.Component {
   render() {
     return (
       <ListCheckbox
-        caption={this.props.todo}
+        caption={this.props.isCompleted ? <strike>{this.props.todo}</strike> : this.props.todo}
         legend="hello world"
       />
     );
@@ -20,6 +20,7 @@ class ToDo extends React.Component {
 
 ToDo.propTypes = {
   todo: PropTypes.string.isRequired,
+  isCompleted: PropTypes.bool.isRequired,
 };
 
 export default ToDo;

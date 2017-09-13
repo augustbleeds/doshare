@@ -8,11 +8,11 @@ const dummyData =
 [
   {
     day: new Date(1996, 7, 14),
-    todos: ['Eat', 'Sleep', 'Play'],
+    todos: [{ task: 'Eat', completed: false }, { task: 'Sleep', completed: false }, { task: 'Play', completed: true }],
   },
   {
     day: new Date(),
-    todos: ['Do Dishes', 'Do Homework', 'Eat Dinner'],
+    todos: [{ task: 'Wakeup', completed: true }, { task: 'Do HW', completed: false }, { task: 'Eat Dinner', completed: false }],
   }];
 
 export default class DoShareApp extends React.Component {
@@ -23,6 +23,14 @@ export default class DoShareApp extends React.Component {
 
   componentWillMount() {
     this.setState({ days: dummyData });
+  }
+
+  // TODO find the current day and add new task to the todos list
+  addToDo(task) {
+    // const newToDo = { task, completed: false };
+    // const today = new Date();
+    console.log(task);
+    this.setState({ days: this.state.days });
   }
 
   render() {

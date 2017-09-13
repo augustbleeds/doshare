@@ -17,7 +17,7 @@ class DayToDo extends React.Component {
           title={this.props.day}
           subtitle={this.props.dateStr}
         />
-        {this.props.todos.map(x => <ToDo todo={x} />)}
+        {this.props.todos.map(td => <ToDo todo={td.task} isCompleted={td.completed} />)}
       </Card>
     );
   }
@@ -26,7 +26,7 @@ class DayToDo extends React.Component {
 DayToDo.propTypes = {
   dateStr: PropTypes.string.isRequired,
   day: PropTypes.string.isRequired,
-  todos: PropTypes.arrayOf(PropTypes.string).isRequired,
+  todos: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default DayToDo;
